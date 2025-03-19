@@ -111,13 +111,13 @@
             <li class="nav-item dropdown user-menu">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                     <img src="{{ Vite::asset('resources/images/user2-160x160.jpg') }}" class="user-image rounded-circle shadow" alt="User Image" />
-                    <span class="d-none d-md-inline">Alexander Pierce</span>
+                    <span class="d-none d-md-inline">{{ auth()->user()->name }}</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                     <li class="user-header text-bg-primary">
                         <img src="{{ Vite::asset('resources/images/user2-160x160.jpg') }}" class="rounded-circle shadow" alt="User Image" />
                         <p>
-                            Alexander Pierce - Web Developer
+                            {{ auth()->user()->name }}
                             <small>Member since Nov. 2023</small>
                         </p>
                     </li>
@@ -129,8 +129,11 @@
                         </div>
                     </li>
                     <li class="user-footer">
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-default btn-flat float-end">Sair</button>
+                        </form>
                         <a href="#" class="btn btn-default btn-flat">Profile</a>
-                        <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
                     </li>
                 </ul>
             </li>

@@ -1,6 +1,8 @@
 @extends('layouts/default')
 
-@section('page-title', "Dashboard")
+@section('title', "Painel")
+
+@section('page-title', "Painel")
 
 @php
 $breadcrumbs = [
