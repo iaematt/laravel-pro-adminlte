@@ -10,9 +10,13 @@
                 <ol class="breadcrumb">
                     @foreach ($breadcrumbs as $breadcrumb)
                     <li class="breadcrumb-item">
+                        @if (array_key_exists('route', $breadcrumb))
                         <a href="{{ $breadcrumb['route'] }}">
                             {{ $breadcrumb['label'] }}
                         </a>
+                        @else
+                        {{ $breadcrumb['label'] }}
+                        @endif
                     </li>
                     @endforeach
                 </ol>

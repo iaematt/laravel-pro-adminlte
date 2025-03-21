@@ -12,6 +12,12 @@
     <div class="sidebar-wrapper">
         <nav class="mt-2">
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a href="{{ route('dashboard') }}" class="nav-link" title="Painel">
+                        <i class="nav-icon bi bi-house"></i>
+                        <p>Painel</p>
+                    </a>
+                </li>
 
                 <li class="nav-item">
                     <a href="{{ route('users.index') }}" class="nav-link" title="Usuários">
