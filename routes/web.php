@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\CheckoutController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\User2Controller;
-use App\Http\Controllers\User3Controller;
-use App\Http\Controllers\User4Controller;
-use App\Http\Controllers\UserController;
+// use App\Http\Controllers\CheckoutController;
+// use App\Http\Controllers\PostController;
+// use App\Http\Controllers\User2Controller;
+// use App\Http\Controllers\User3Controller;
+// use App\Http\Controllers\User4Controller;
+// use App\Http\Controllers\UserController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*Route::middleware(['auth'])->group(function () {
@@ -53,9 +54,25 @@ use Illuminate\Support\Facades\Route;
 //     'user' => 'email',
 // ]);
 
-Route::resourceVerbs([
-    'create' => 'adicionar',
-    'edit' => 'editar',
-]);
+// Route::resourceVerbs([
+//     'create' => 'adicionar',
+//     'edit' => 'editar',
+// ]);
 
-Route::resource('usuarios', User4Controller::class);
+// Route::resource('usuarios', User4Controller::class);
+
+Route::get('user/{user}', function (Request $request) {
+    // dd($request);
+    // dd($request->path());
+    // dd($request->url());
+    // dd($request->fullUrl());
+    // dd($request->fullUrlWithQuery(['curso' => 'laravel'])); //https://laravel-pro-adminlte.test/user?token=abc
+    // dd($request->fullUrlIs('https://laravel-pro-adminlte.test/user?token=abc'));
+    // dd($request->is('user'));
+    // dd($request->is('user/*'));
+    // dd($request->routeIs('user'));
+    // dd($request->method());
+    // dd($request->isMethod('get'));
+
+    dd($request->input('token'));
+})->name('user');
