@@ -1,14 +1,14 @@
 <?php
 
-use App\Http\Controllers\CheckoutController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\User2Controller;
-use App\Http\Controllers\User3Controller;
-use App\Http\Controllers\User4Controller;
+// use App\Http\Controllers\CheckoutController;
+// use App\Http\Controllers\PostController;
+// use App\Http\Controllers\User2Controller;
+// use App\Http\Controllers\User3Controller;
+// use App\Http\Controllers\User4Controller;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-/*Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');
@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
     Route::put('/usuarios/{user}/interests', [UserController::class, 'updateInterests'])->name('users.updateInterests');
     Route::put('/usuarios/{user}/roles', [UserController::class, 'updateRoles'])->name('users.updateRoles');
     Route::delete('/usuarios/{user}', [UserController::class, 'destroy'])->name('users.destroy');
-});*/
+});
 
 // Route::get('/users', [User2Controller::class, 'index']);
 // Route::get('/users/{user}', [User2Controller::class, 'show']);
@@ -53,9 +53,9 @@ use Illuminate\Support\Facades\Route;
 //     'user' => 'email',
 // ]);
 
-Route::resourceVerbs([
-    'create' => 'adicionar',
-    'edit' => 'editar',
-]);
+// Route::resourceVerbs([
+//     'create' => 'adicionar',
+//     'edit' => 'editar',
+// ]);
 
-Route::resource('usuarios', User4Controller::class);
+// Route::resource('usuarios', User4Controller::class);
